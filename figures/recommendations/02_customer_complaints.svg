@@ -17,162 +17,73 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 207.36 388.44 
-L 602.64 388.44 
-L 602.64 70.2 
-L 207.36 70.2 
-L 207.36 388.44 
+    <path d="M 236.767755 365.132028 
+C 254.980966 378.977354 276.231421 388.28964 298.756092 392.296305 
+C 321.280764 396.30297 344.438999 394.890056 366.309508 388.174769 
+C 388.180018 381.459491 408.140745 369.63285 424.535687 353.676031 
+C 440.93063 337.719211 453.293459 318.086053 460.598519 296.405411 
+C 467.90358 274.724768 469.943092 251.613304 466.54786 228.988393 
+C 463.152628 206.363481 454.419206 184.868637 441.07216 166.287179 
+C 427.725115 147.705722 410.14406 132.566131 389.787593 122.124456 
+C 369.43113 111.682781 346.878239 106.236 323.999994 106.236 
+L 323.999997 178.308 
+C 335.43912 178.308 346.715565 181.03139 356.893797 186.252228 
+C 367.07203 191.473066 375.862557 199.042861 382.53608 208.33359 
+C 389.209603 217.624318 393.576314 228.37174 395.27393 239.684197 
+C 396.971546 250.996652 395.95179 262.552384 392.29926 273.392705 
+C 388.646729 284.233027 382.465315 294.049605 374.267844 302.028015 
+C 366.070372 310.006425 356.090009 315.919746 345.154754 319.277385 
+C 334.219499 322.635028 322.640382 323.341485 311.378046 321.338152 
+C 300.11571 319.33482 289.490483 314.678677 280.383878 307.756014 
 z
-" style="fill: none"/>
-   </g>
-   <g id="matplotlib.axis_1">
-    <g id="xtick_1">
-     <g id="line2d_1">
-      <path d="M 207.36 388.44 
-L 207.36 70.2 
-" clip-path="url(#p512ef65433)" style="fill: none; stroke: #ded6c8; stroke-width: 0.8; stroke-linecap: square"/>
-     </g>
-     <g id="line2d_2"/>
-     <g id="text_1">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #71695e" x="207.36" y="402.577812" transform="rotate(-0 207.36 402.577812)">0</text>
-     </g>
-    </g>
-    <g id="xtick_2">
-     <g id="line2d_3">
-      <path d="M 302.265162 388.44 
-L 302.265162 70.2 
-" clip-path="url(#p512ef65433)" style="fill: none; stroke: #ded6c8; stroke-width: 0.8; stroke-linecap: square"/>
-     </g>
-     <g id="line2d_4"/>
-     <g id="text_2">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #71695e" x="302.265162" y="402.577812" transform="rotate(-0 302.265162 402.577812)">10</text>
-     </g>
-    </g>
-    <g id="xtick_3">
-     <g id="line2d_5">
-      <path d="M 397.170324 388.44 
-L 397.170324 70.2 
-" clip-path="url(#p512ef65433)" style="fill: none; stroke: #ded6c8; stroke-width: 0.8; stroke-linecap: square"/>
-     </g>
-     <g id="line2d_6"/>
-     <g id="text_3">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #71695e" x="397.170324" y="402.577812" transform="rotate(-0 397.170324 402.577812)">20</text>
-     </g>
-    </g>
-    <g id="xtick_4">
-     <g id="line2d_7">
-      <path d="M 492.075486 388.44 
-L 492.075486 70.2 
-" clip-path="url(#p512ef65433)" style="fill: none; stroke: #ded6c8; stroke-width: 0.8; stroke-linecap: square"/>
-     </g>
-     <g id="line2d_8"/>
-     <g id="text_4">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #71695e" x="492.075486" y="402.577812" transform="rotate(-0 492.075486 402.577812)">30</text>
-     </g>
-    </g>
-    <g id="xtick_5">
-     <g id="line2d_9">
-      <path d="M 586.980648 388.44 
-L 586.980648 70.2 
-" clip-path="url(#p512ef65433)" style="fill: none; stroke: #ded6c8; stroke-width: 0.8; stroke-linecap: square"/>
-     </g>
-     <g id="line2d_10"/>
-     <g id="text_5">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #71695e" x="586.980648" y="402.577812" transform="rotate(-0 586.980648 402.577812)">40</text>
-     </g>
-    </g>
-    <g id="text_6">
-     <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="405" y="430.127187" transform="rotate(-0 405 430.127187)">Number of complaints</text>
-    </g>
-   </g>
-   <g id="matplotlib.axis_2">
-    <g id="ytick_1">
-     <g id="line2d_11"/>
-     <g id="text_7">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #211d19" x="197.36" y="122.067276" transform="rotate(-0 197.36 122.067276)">Late Delivery</text>
-     </g>
-    </g>
-    <g id="ytick_2">
-     <g id="line2d_12"/>
-     <g id="text_8">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #211d19" x="197.36" y="234.638906" transform="rotate(-0 197.36 234.638906)">Product Not Suitable</text>
-     </g>
-    </g>
-    <g id="ytick_3">
-     <g id="line2d_13"/>
-     <g id="text_9">
-      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #211d19" x="197.36" y="347.210537" transform="rotate(-0 197.36 347.210537)">Product Quality</text>
-     </g>
-    </g>
-    <g id="text_10">
-     <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="34.7625" y="229.32" transform="rotate(-90 34.7625 229.32)">Complaint category</text>
-    </g>
+" style="fill: #d95e26; stroke: #f4efe3; stroke-width: 2.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 207.36 84.665455 
-L 539.528067 84.665455 
-L 539.528067 148.831284 
-L 207.36 148.831284 
+    <path d="M 249.685983 126.869196 
+C 229.517123 139.004406 212.624363 155.897166 200.489161 176.066034 
+C 188.35396 196.234903 181.341729 219.072557 180.067398 242.576227 
+C 178.793075 266.079896 183.295015 289.541802 193.178447 310.904485 
+C 203.06188 332.267172 218.029165 350.887318 236.767755 365.132028 
+L 280.383878 307.756014 
+C 271.014582 300.633659 263.53094 291.323586 258.589224 280.642242 
+C 253.647507 269.960901 251.396538 258.229948 252.033699 246.478114 
+C 252.670864 234.726279 256.17698 223.307451 262.244581 213.223017 
+C 268.312181 203.138583 276.758561 194.692203 286.842991 188.624598 
 z
-" clip-path="url(#p512ef65433)" style="fill: #d95e26"/>
+" style="fill: #ebaf3d; stroke: #f4efe3; stroke-width: 2.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 207.36 197.237085 
-L 378.189292 197.237085 
-L 378.189292 261.402915 
-L 207.36 261.402915 
+    <path d="M 324.000002 106.236 
+C 310.967453 106.236 297.994861 108.003483 285.43735 111.490061 
+C 272.879839 114.97664 260.853017 120.150215 249.685983 126.869196 
+L 286.842991 188.624598 
+C 292.426508 185.265107 298.439919 182.67832 304.718675 180.935031 
+C 310.997431 179.191742 317.483727 178.308 324.000001 178.308 
 z
-" clip-path="url(#p512ef65433)" style="fill: #d95e26"/>
+" style="fill: #b6ad9f; stroke: #f4efe3; stroke-width: 2.5; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_5">
-    <path d="M 207.36 309.808716 
-L 254.812581 309.808716 
-L 254.812581 373.974545 
-L 207.36 373.974545 
-z
-" clip-path="url(#p512ef65433)" style="fill: #b6ad9f"/>
+   <g id="text_1">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="476.990342" y="306.067508" transform="rotate(-0 476.990342 306.067508)">Late Delivery</text>
    </g>
-   <g id="text_11">
-    <g id="patch_6">
-     <path d="M 546.392269 125.930869 
-L 571.537269 125.930869 
-L 571.537269 107.565869 
-L 546.392269 107.565869 
-z
-" style="fill: #f4efe3"/>
-    </g>
-    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="547.832269" y="121.163369" transform="rotate(-0 547.832269 121.163369)">35</text>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="426.44889" y="289.038111" transform="rotate(-0 426.44889 289.038111)">60.34%</text>
    </g>
-   <g id="text_12">
-    <g id="patch_7">
-     <path d="M 385.053493 238.5025 
-L 410.198493 238.5025 
-L 410.198493 220.1375 
-L 385.053493 220.1375 
-z
-" style="fill: #f4efe3"/>
-    </g>
-    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="386.493493" y="233.735" transform="rotate(-0 386.493493 233.735)">18</text>
+   <g id="text_3">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #211d19" transform="translate(74.801738 237.380439)">Product Not</text>
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #211d19" transform="translate(101.607207 254.177157)">Suitable</text>
    </g>
-   <g id="text_13">
-    <g id="patch_8">
-     <path d="M 261.676783 351.074131 
-L 275.689283 351.074131 
-L 275.689283 332.709131 
-L 261.676783 332.709131 
-z
-" style="fill: #f4efe3"/>
-    </g>
-    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="263.116783" y="346.306631" transform="rotate(-0 263.116783 346.306631)">5</text>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="216.05055" y="248.666207" transform="rotate(-0 216.05055 248.666207)">31.03%</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #211d19" x="280.809906" y="98.962312" transform="rotate(-0 280.809906 98.962312)">Product Quality</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="295.078062" y="150.351596" transform="rotate(-0 295.078062 150.351596)">8.62%</text>
    </g>
   </g>
-  <g id="text_14">
-   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="324" y="35.436563" transform="rotate(-0 324 35.436563)">Complaints by category</text>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="324" y="35.436563" transform="rotate(-0 324 35.436563)">Complaint share by category</text>
   </g>
  </g>
- <defs>
-  <clipPath id="p512ef65433">
-   <rect x="207.36" y="70.2" width="395.28" height="318.24"/>
-  </clipPath>
- </defs>
 </svg>

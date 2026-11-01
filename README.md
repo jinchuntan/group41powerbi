@@ -12,7 +12,7 @@ Three charts accompany the marketing, customer experience and product profitabil
 | 2. Delivery and product suitability | [PNG](figures/recommendations/02_customer_complaints.png) | [SVG](figures/recommendations/02_customer_complaints.svg) |
 | 3. Home Office profitability | [PNG](figures/recommendations/03_category_gross_margin.png) | [SVG](figures/recommendations/03_category_gross_margin.svg) |
 
-The PNGs use the slide's cream background (`#F4EFE3`) and export at 2700 x 1950 pixels. The SVG backgrounds are transparent. Each figure contains its title, x and y axis titles, category labels and values. Explanatory captions and callouts stay in the slide text. Orange highlights the main comparison and amber identifies the suggested add-on categories. All bars start at zero. Use a chart beside two or three recommendation points.
+The PNGs use the slide's cream background (`#F4EFE3`) and export at 2700 x 1950 pixels. The SVG backgrounds are transparent. Marketing ROAS uses a horizontal bar chart, complaint shares use a donut chart, and category gross margins use a dot plot. The bar chart and dot plot label both axes. The donut labels each category and its percentage of complaints. Explanatory captions and callouts stay in the slide text. Orange highlights the main comparison and amber identifies suitability complaints or the suggested add-on categories. Use a chart beside two or three recommendation points.
 
 ![Marketing ROAS](figures/recommendations/01_marketing_roas.png)
 

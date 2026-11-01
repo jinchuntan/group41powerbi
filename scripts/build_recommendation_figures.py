@@ -25,7 +25,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
-from matplotlib.ticker import FuncFormatter, MaxNLocator, MultipleLocator
+from matplotlib.ticker import FuncFormatter, MultipleLocator
 from openpyxl import load_workbook
 from openpyxl.workbook.workbook import Workbook
 
@@ -383,23 +383,45 @@ def plot_marketing(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
 
 
 def plot_complaints(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
+    """Show how the three complaint categories divide the complaint total."""
     rows = data["complaints"]
-    fig, ax = create_chart_canvas(
-        "Complaints by category", "Number of complaints", "Complaint category"
+    fig, ax = plt.subplots(figsize=(9, 6.5))
+    fig.patch.set_facecolor(CREAM)
+    ax.set_facecolor("none")
+    fig.subplots_adjust(left=0.12, right=0.88, bottom=0.08, top=0.85)
+    fig.suptitle(
+        "Complaint share by category", y=0.96,
+        fontsize=22, fontweight="bold", color=INK,
     )
-    colors = [
-        ORANGE if row["category"] in SERVICE_PRIORITY_CATEGORIES else GREY
+    category_colors = {
+        "Late Delivery": ORANGE,
+        "Product Not Suitable": AMBER,
+        "Product Quality": GREY,
+    }
+    labels = [
+        row["category"].replace("Product Not Suitable", "Product Not\nSuitable")
         for row in rows
     ]
-    draw_horizontal_bars(
-        ax, [row["category"] for row in rows],
-        [row["complaints"] for row in rows], colors, ""
+    _, _, percentage_labels = ax.pie(
+        [row["complaints"] for row in rows],
+        labels=labels,
+        colors=[category_colors.get(row["category"], GREY) for row in rows],
+        startangle=90,
+        counterclock=False,
+        autopct="%1.2f%%",
+        pctdistance=0.75,
+        labeldistance=1.12,
+        wedgeprops={"width": 0.50, "edgecolor": CREAM, "linewidth": 2.5},
+        textprops={"fontsize": 15, "color": INK},
     )
-    ax.xaxis.set_major_locator(MaxNLocator(integer=True, nbins=5))
+    for label in percentage_labels:
+        label.set_fontweight("bold")
+    ax.set_axis_off()
     save_chart(fig, output_dir, "02_customer_complaints", dpi)
 
 
 def plot_margins(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
+    """Compare independent category margins by position on one percentage axis."""
     rows = data["categories"]
     fig, ax = create_chart_canvas(
         "Gross margin by category", "Weighted gross margin (%)", "Product category"
@@ -411,11 +433,25 @@ def plot_margins(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
         elif row["category"] in ADD_ON_CATEGORIES:
             colors.append(AMBER)
         else:
-            colors.append(GREY)
-    draw_horizontal_bars(
-        ax, [row["category"] for row in rows],
-        [row["weighted_margin_pct"] for row in rows], colors, "%"
+            colors.append(MUTED)
+    values = [row["weighted_margin_pct"] for row in rows]
+    positions = list(range(len(rows)))
+    ax.scatter(
+        values, positions, s=260, c=colors,
+        edgecolors=INK, linewidths=0.9, zorder=3,
     )
+    ax.set_yticks(positions, [row["category"] for row in rows])
+    ax.set_ylim(len(rows) - 0.5, -0.5)
+    low, high = min(0, min(values)), max(0, max(values))
+    span = high - low or 1
+    ax.set_xlim(low - span * 0.03, high + span * 0.28)
+    ax.yaxis.grid(True, color=GRID, linewidth=0.7)
+    for position, value in zip(positions, values):
+        ax.text(
+            value + span * 0.035, position, f"{value:.2f}%",
+            va="center", ha="left", fontsize=16, fontweight="bold", color=INK,
+            bbox={"facecolor": CREAM, "edgecolor": "none", "pad": 1.5},
+        )
     ax.xaxis.set_major_locator(MultipleLocator(20))
     ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:g}%"))
     save_chart(fig, output_dir, "03_category_gross_margin", dpi)
