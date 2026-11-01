@@ -6,11 +6,11 @@ The workbook and Power BI report support the Kampus Digital business performance
 
 Three charts accompany the marketing, customer experience and product profitability recommendations. The figures contain historical results. Proposed trial targets remain in the presentation text.
 
-| Figure | PNG for slides | SVG with editable text |
+| Recommendation | PNG for slides | SVG with editable text |
 | --- | --- | --- |
-| Marketing ROAS | [PNG](figures/recommendations/01_marketing_roas.png) | [SVG](figures/recommendations/01_marketing_roas.svg) |
-| Customer complaints | [PNG](figures/recommendations/02_customer_complaints.png) | [SVG](figures/recommendations/02_customer_complaints.svg) |
-| Category gross margin | [PNG](figures/recommendations/03_category_gross_margin.png) | [SVG](figures/recommendations/03_category_gross_margin.svg) |
+| 1. Marketing budget reallocation | [PNG](figures/recommendations/01_marketing_roas.png) | [SVG](figures/recommendations/01_marketing_roas.svg) |
+| 2. Delivery and product suitability | [PNG](figures/recommendations/02_customer_complaints.png) | [SVG](figures/recommendations/02_customer_complaints.svg) |
+| 3. Home Office profitability | [PNG](figures/recommendations/03_category_gross_margin.png) | [SVG](figures/recommendations/03_category_gross_margin.svg) |
 
 The PNGs use the slide's cream background (`#F4EFE3`) and export at 2700 x 1950 pixels. The SVG backgrounds are transparent. Orange highlights the main comparison and amber identifies the suggested add-on categories. All bars start at zero. Use a chart beside two or three recommendation points.
 
@@ -38,6 +38,20 @@ python scripts/build_recommendation_figures.py --workbook "updated.xlsx" --outpu
 The script reads the workbook without modifying it. It exports three PNGs, three SVGs, three CSV tables and `metrics.json`. Calculations use the raw sheets, so stale cached summary formulas do not determine the figures. SVG text remains editable. The script and pinned dependencies reproduce the charts without an image generation service.
 
 The downloadable figures bundle does not contain another copy of the workbook. When using that bundle, pass the path to your existing Excel file with `--workbook`, as in the command above.
+
+## Updating the code
+
+The script keeps source parsing, business calculations and chart styling in separate functions. `build_metrics` reads the source tables, then calls `calculate_marketing_metrics`, `calculate_service_metrics` and `calculate_financial_metrics`. The plotting functions use those results without repeating the calculations. Colours and the recommendation categories are named constants near the top of the file.
+
+`save_chart` controls both image formats. PNGs retain their resolution information but omit optional text, software, EXIF and XMP metadata. SVGs omit their metadata element while preserving editable text. These are charts plotted from the workbook with Matplotlib.
+
+Run the calculation and export checks with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The tests cover weighted ratios, missing product costs, duplicate IDs, percentage parsing, service counts and metadata-free exports.
 
 ## Calculation definitions
 
