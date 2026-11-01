@@ -1,0 +1,117 @@
+{
+  "source_workbook": "Grp 41 Kampus Digital Student Workbook (1).xlsx",
+  "source_sha256": "e13dd66bd38dbc773e712f601f8d880fc8f1868311a064fae45861f7a8e409e4",
+  "marketing": [
+    {
+      "channel": "Email Retargeting",
+      "spend_rm": 13700.0,
+      "attributed_revenue_rm": 70500.0,
+      "roas": 5.145985401459854
+    },
+    {
+      "channel": "Campus Activation",
+      "spend_rm": 17000.0,
+      "attributed_revenue_rm": 63000.0,
+      "roas": 3.7058823529411766
+    },
+    {
+      "channel": "Paid Search",
+      "spend_rm": 39500.0,
+      "attributed_revenue_rm": 89000.0,
+      "roas": 2.2531645569620253
+    },
+    {
+      "channel": "Social Media",
+      "spend_rm": 25000.0,
+      "attributed_revenue_rm": 41000.0,
+      "roas": 1.64
+    },
+    {
+      "channel": "Influencer",
+      "spend_rm": 35000.0,
+      "attributed_revenue_rm": 44000.0,
+      "roas": 1.2571428571428571
+    }
+  ],
+  "marketing_summary": {
+    "campaigns": 12,
+    "total_spend_rm": 130200.0,
+    "influencer_social_spend_pct": 46.08294930875576
+  },
+  "complaints": [
+    {
+      "category": "Late Delivery",
+      "complaints": 35
+    },
+    {
+      "category": "Product Not Suitable",
+      "complaints": 18
+    },
+    {
+      "category": "Product Quality",
+      "complaints": 5
+    }
+  ],
+  "service_summary": {
+    "unique_orders": 240,
+    "total_complaints": 58,
+    "delivery_suitability_complaints": 53,
+    "delivery_suitability_complaints_pct": 91.37931034482759,
+    "returned_orders": 21,
+    "delivery_suitability_returns": 21
+  },
+  "categories": [
+    {
+      "category": "Home Office",
+      "revenue_rm": 24654.0,
+      "cost_rm": 15862.0,
+      "gross_profit_rm": 8792.0,
+      "completed_orders": 40,
+      "weighted_margin_pct": 35.66155593412834
+    },
+    {
+      "category": "Electronics",
+      "revenue_rm": 18371.75,
+      "cost_rm": 11203.0,
+      "gross_profit_rm": 7168.75,
+      "completed_orders": 64,
+      "weighted_margin_pct": 39.02050702845401
+    },
+    {
+      "category": "Lifestyle",
+      "revenue_rm": 4950.45,
+      "cost_rm": 2718.0,
+      "gross_profit_rm": 2232.45,
+      "completed_orders": 33,
+      "weighted_margin_pct": 45.09590037269339
+    },
+    {
+      "category": "Accessories",
+      "revenue_rm": 8715.95,
+      "cost_rm": 4304.0,
+      "gross_profit_rm": 4411.95,
+      "completed_orders": 55,
+      "weighted_margin_pct": 50.61926697606113
+    },
+    {
+      "category": "Stationery",
+      "revenue_rm": 917.5,
+      "cost_rm": 320.0,
+      "gross_profit_rm": 597.5,
+      "completed_orders": 15,
+      "weighted_margin_pct": 65.12261580381471
+    }
+  ],
+  "financial_summary": {
+    "completed_orders": 208,
+    "cost_matched_completed_orders": 207,
+    "revenue_rm": 57609.65,
+    "cost_rm": 34407.0,
+    "gross_profit_rm": 23202.65,
+    "weighted_margin_pct": 40.27563090558613,
+    "home_office_revenue_share_pct": 42.79491369935419,
+    "excluded_unknown_cost_orders": 1,
+    "excluded_unknown_cost_revenue_rm": 716.4
+  },
+  "exact_order_duplicates_removed": 1
+}
