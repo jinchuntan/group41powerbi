@@ -4,13 +4,14 @@ The workbook and Power BI report support the Kampus Digital business performance
 
 ## Recommendation figures
 
-Three charts accompany the marketing, customer experience and product profitability recommendations. The figures contain historical results. Proposed trial targets remain in the presentation text.
+Three charts accompany the marketing, customer experience and product profitability recommendations. These charts contain historical results. A fourth diagram summarises the learning and reflection points. Its final step describes planning a controlled trial. Proposed trial targets remain in the presentation text.
 
 | Recommendation | PNG for slides | SVG with editable text |
 | --- | --- | --- |
 | 1. Marketing budget reallocation | [PNG](figures/recommendations/01_marketing_roas.png) | [SVG](figures/recommendations/01_marketing_roas.svg) |
 | 2. Delivery and product suitability | [PNG](figures/recommendations/02_customer_complaints.png) | [SVG](figures/recommendations/02_customer_complaints.svg) |
 | 3. Home Office profitability | [PNG](figures/recommendations/03_category_gross_margin.png) | [SVG](figures/recommendations/03_category_gross_margin.svg) |
+| Learning and reflection | [PNG](figures/recommendations/04_learning_reflection.png) | [SVG](figures/recommendations/04_learning_reflection.svg) |
 
 The PNGs use the slide's cream background (`#F4EFE3`) and export at 2700 x 1950 pixels. The SVG backgrounds are transparent. Marketing ROAS uses a horizontal bar chart, complaint shares use a donut chart, and category gross margins use a dot plot. The bar chart and dot plot label both axes. The donut labels each category and its percentage of complaints. Explanatory captions and callouts stay in the slide text. Orange highlights the main comparison and amber identifies suitability complaints or the suggested add-on categories. Use a chart beside two or three recommendation points.
 
@@ -20,6 +21,10 @@ The PNGs use the slide's cream background (`#F4EFE3`) and export at 2700 x 1950 
 
 ![Category gross margin](figures/recommendations/03_category_gross_margin.png)
 
+![Learning and reflection](figures/recommendations/04_learning_reflection.png)
+
+The reflection diagram is square at 2250 x 2250 pixels. It uses three numbered steps and two connecting arrows, with one short caption per step.
+
 ## Rebuild
 
 Use Python 3.10 or later. From the repository root:
@@ -27,6 +32,7 @@ Use Python 3.10 or later. From the repository root:
 ```bash
 python -m pip install -r scripts/requirements-figures.txt
 python scripts/build_recommendation_figures.py
+python scripts/build_reflection_diagram.py
 ```
 
 An updated workbook can be passed explicitly:
@@ -38,6 +44,8 @@ python scripts/build_recommendation_figures.py --workbook "updated.xlsx" --outpu
 The script reads the workbook without modifying it. It exports three PNGs, three SVGs, three CSV tables and `metrics.json`. Calculations use the raw sheets, so stale cached summary formulas do not determine the figures. SVG text remains editable. The script and pinned dependencies reproduce the charts without an image generation service.
 
 The downloadable figures bundle does not contain another copy of the workbook. When using that bundle, pass the path to your existing Excel file with `--workbook`, as in the command above.
+
+`build_reflection_diagram.py` is standalone and needs only Matplotlib. Change its `STEPS` tuple to update the labels or captions. It exports a cream-background PNG and a transparent SVG with editable text, using the same metadata settings as the charts.
 
 ## Updating the code
 

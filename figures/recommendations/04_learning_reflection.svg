@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="540pt" height="540pt" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 540 
+L 540 540 
+L 540 0 
+L 0 0 
+L 0 540 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 86.4 180.9 
+C 94.276532 180.9 101.831522 177.770621 107.401071 172.201071 
+C 112.970621 166.631522 116.1 159.076532 116.1 151.2 
+C 116.1 143.323468 112.970621 135.768478 107.401071 130.198929 
+C 101.831522 124.629379 94.276532 121.5 86.4 121.5 
+C 78.523468 121.5 70.968478 124.629379 65.398929 130.198929 
+C 59.829379 135.768478 56.7 143.323468 56.7 151.2 
+C 56.7 159.076532 59.829379 166.631522 65.398929 172.201071 
+C 70.968478 177.770621 78.523468 180.9 86.4 180.9 
+z
+" clip-path="url(#pb890d73a3f)" style="fill: #d95e26"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 86.4 193.697644 
+Q 86.4 221.398555 86.4 247.087005 
+" clip-path="url(#pb890d73a3f)" style="fill: none; stroke: #d95e26; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 90 239.887005 
+L 86.4 247.087005 
+L 82.8 239.887005 
+z
+" clip-path="url(#pb890d73a3f)" style="fill: #d95e26; stroke: #d95e26; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 86.4 321.3 
+C 94.276532 321.3 101.831522 318.170621 107.401071 312.601071 
+C 112.970621 307.031522 116.1 299.476532 116.1 291.6 
+C 116.1 283.723468 112.970621 276.168478 107.401071 270.598929 
+C 101.831522 265.029379 94.276532 261.9 86.4 261.9 
+C 78.523468 261.9 70.968478 265.029379 65.398929 270.598929 
+C 59.829379 276.168478 56.7 283.723468 56.7 291.6 
+C 56.7 299.476532 59.829379 307.031522 65.398929 312.601071 
+C 70.968478 318.170621 78.523468 321.3 86.4 321.3 
+z
+" clip-path="url(#pb890d73a3f)" style="fill: #d95e26"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 86.4 334.097644 
+Q 86.4 361.798555 86.4 387.487005 
+" clip-path="url(#pb890d73a3f)" style="fill: none; stroke: #d95e26; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 90 380.287005 
+L 86.4 387.487005 
+L 82.8 380.287005 
+z
+" clip-path="url(#pb890d73a3f)" style="fill: #d95e26; stroke: #d95e26; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 86.4 461.7 
+C 94.276532 461.7 101.831522 458.570621 107.401071 453.001071 
+C 112.970621 447.431522 116.1 439.876532 116.1 432 
+C 116.1 424.123468 112.970621 416.568478 107.401071 410.998929 
+C 101.831522 405.429379 94.276532 402.3 86.4 402.3 
+C 78.523468 402.3 70.968478 405.429379 65.398929 410.998929 
+C 59.829379 416.568478 56.7 424.123468 56.7 432 
+C 56.7 439.876532 59.829379 447.431522 65.398929 453.001071 
+C 70.968478 458.570621 78.523468 461.7 86.4 461.7 
+z
+" clip-path="url(#pb890d73a3f)" style="fill: #d95e26"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; fill: #211d19" transform="translate(163.150625 44.476406)">How we reached</text>
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; fill: #211d19" transform="translate(127.732422 71.105195)">our recommendations</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="86.4" y="156.442813" transform="rotate(-0 86.4 156.442813)">1</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="156.6" y="143.21875" transform="rotate(-0 156.6 143.21875)">Check the data</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #71695e" x="156.6" y="176.477578" transform="rotate(-0 156.6 176.477578)">Match revenue and costs.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="86.4" y="296.842813" transform="rotate(-0 86.4 296.842813)">2</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="156.6" y="283.61875" transform="rotate(-0 156.6 283.61875)">Interpret the results</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; fill: #71695e" transform="translate(156.6 316.877578)">Assess ROAS alongside</text>
+    <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; fill: #71695e" transform="translate(156.6 337.178582)">product costs.</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #211d19" x="86.4" y="437.242813" transform="rotate(-0 86.4 437.242813)">3</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #211d19" x="156.6" y="424.01875" transform="rotate(-0 156.6 424.01875)">Plan controlled trials</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; fill: #71695e" transform="translate(156.6 457.277578)">Set profit and customer</text>
+    <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; fill: #71695e" transform="translate(156.6 477.578582)">experience targets.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb890d73a3f">
+   <rect x="0" y="0" width="540" height="540"/>
+  </clipPath>
+ </defs>
+</svg>
