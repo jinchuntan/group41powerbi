@@ -320,15 +320,19 @@ def build_metrics(workbook_path: Path) -> Record:
     }
 
 
-def create_chart_canvas(title: str, subtitle: str) -> tuple[Figure, Axes]:
+def create_chart_canvas(
+    title: str, x_label: str, y_label: str
+) -> tuple[Figure, Axes]:
+    """Keep slide figures limited to the chart title, axes and plotted values."""
     fig, ax = plt.subplots(figsize=(9, 6.5))
     fig.patch.set_facecolor(CREAM)
     ax.set_facecolor("none")
-    fig.subplots_adjust(left=0.31, right=0.92, bottom=0.27, top=0.79)
-    fig.text(0.04, 0.94, title, fontsize=21, fontweight="bold", color=INK, va="top")
-    fig.text(0.04, 0.875, subtitle, fontsize=12.5, color=MUTED, va="top")
+    fig.subplots_adjust(left=0.32, right=0.93, bottom=0.17, top=0.85)
+    fig.suptitle(title, y=0.96, fontsize=22, fontweight="bold", color=INK)
+    ax.set_xlabel(x_label, fontsize=14, color=INK, labelpad=14)
+    ax.set_ylabel(y_label, fontsize=14, color=INK, labelpad=16)
     ax.spines[["top", "right", "left", "bottom"]].set_visible(False)
-    ax.tick_params(axis="both", length=0, labelsize=12.5, colors=MUTED)
+    ax.tick_params(axis="both", length=0, labelsize=14, colors=MUTED)
     ax.tick_params(axis="y", colors=INK, pad=10)
     ax.set_axisbelow(True)
     ax.xaxis.grid(True, color=GRID, linewidth=0.8)
@@ -346,7 +350,7 @@ def draw_horizontal_bars(
         label = f"{value:.2f}{suffix}" if suffix else str(int(value))
         label_position = value + span * 0.025 if value >= 0 else value - span * 0.025
         ax.text(label_position, index, label, va="center", ha="left" if value >= 0 else "right",
-                color=INK, fontsize=14, fontweight="bold", zorder=5,
+                color=INK, fontsize=16, fontweight="bold", zorder=5,
                 bbox={"facecolor": CREAM, "edgecolor": "none", "pad": 1.5})
     ax.set_xlim(low - (span * 0.19 if low < 0 else 0), high + span * 0.19)
 
@@ -363,7 +367,7 @@ def save_chart(fig: Figure, output_dir: Path, stem: str, dpi: int) -> None:
 def plot_marketing(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
     rows = data["marketing"]
     fig, ax = create_chart_canvas(
-        "Marketing ROAS by channel", "Attributed revenue per RM1 of campaign spend"
+        "Marketing ROAS by channel", "Revenue per RM1 spent (ROAS)", "Marketing channel"
     )
     colors = [
         ORANGE if row["channel"] in TEST_DESTINATION_CHANNELS else GREY
@@ -375,23 +379,14 @@ def plot_marketing(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
     )
     ax.xaxis.set_major_locator(MultipleLocator(2))
     ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:g}x"))
-    ax.set_xlabel("Return on advertising spend (ROAS)", fontsize=12, color=MUTED, labelpad=12)
-    share = data["marketing_summary"]["influencer_social_spend_pct"]
-    fig.text(0.04, 0.13, f"Influencer and Social Media received {share:.1f}% of campaign spending.",
-             fontsize=12.5, color=INK)
-    fig.text(0.04, 0.07, "ROAS measures attributed revenue, before product and operating costs.",
-             fontsize=11, color=MUTED)
     save_chart(fig, output_dir, "01_marketing_roas", dpi)
 
 
 def plot_complaints(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
     rows = data["complaints"]
-    summary = data["service_summary"]
-    subtitle = (
-        f"{summary['total_complaints']} complaints across "
-        f"{summary['unique_orders']} unique orders"
+    fig, ax = create_chart_canvas(
+        "Complaints by category", "Number of complaints", "Complaint category"
     )
-    fig, ax = create_chart_canvas("Complaints by category", subtitle)
     colors = [
         ORANGE if row["category"] in SERVICE_PRIORITY_CATEGORIES else GREY
         for row in rows
@@ -401,26 +396,13 @@ def plot_complaints(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
         [row["complaints"] for row in rows], colors, ""
     )
     ax.xaxis.set_major_locator(MaxNLocator(integer=True, nbins=5))
-    ax.set_xlabel("Number of complaints", fontsize=12, color=MUTED, labelpad=12)
-    share = summary["delivery_suitability_complaints_pct"]
-    fig.text(
-        0.04, 0.13,
-        f"Delivery and suitability account for {share:.1f}% of complaints.",
-        fontsize=13, color=INK,
-    )
-    returns_caption = (
-        f"{summary['delivery_suitability_returns']} of {summary['returned_orders']} "
-        "returned orders fall within these two categories."
-    )
-    fig.text(0.04, 0.07, returns_caption, fontsize=11.5, color=MUTED)
     save_chart(fig, output_dir, "02_customer_complaints", dpi)
 
 
 def plot_margins(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
     rows = data["categories"]
-    summary = data["financial_summary"]
     fig, ax = create_chart_canvas(
-        "Category gross margins", "Weighted margin on completed orders with available costs"
+        "Gross margin by category", "Weighted gross margin (%)", "Product category"
     )
     colors = []
     for row in rows:
@@ -434,24 +416,8 @@ def plot_margins(data: dict[str, Any], output_dir: Path, dpi: int) -> None:
         ax, [row["category"] for row in rows],
         [row["weighted_margin_pct"] for row in rows], colors, "%"
     )
-    overall = summary["weighted_margin_pct"]
-    ax.axvline(overall, color=INK, linewidth=1.3, linestyle=(0, (4, 4)), zorder=2,
-               label=f"Overall {overall:.2f}%")
-    ax.legend(loc="upper left", bbox_to_anchor=(0, 1.085), frameon=False, fontsize=11.5,
-              labelcolor=INK, handlelength=2.6, borderaxespad=0)
     ax.xaxis.set_major_locator(MultipleLocator(20))
     ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:g}%"))
-    ax.set_xlabel("Gross profit / revenue", fontsize=12, color=MUTED, labelpad=12)
-    share = summary["home_office_revenue_share_pct"]
-    fig.text(
-        0.04, 0.13,
-        f"Home Office contributes {share:.1f}% of cost-matched completed revenue.",
-        fontsize=12.5, color=INK,
-    )
-    fig.text(
-        0.04, 0.07, "Margins exclude marketing, delivery and overhead costs.",
-        fontsize=11, color=MUTED,
-    )
     save_chart(fig, output_dir, "03_category_gross_margin", dpi)
 
 
